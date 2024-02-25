@@ -1,0 +1,11 @@
+**/MDK-ARM/.build/*
+**/MDK-ARM/AUDIO-NS4150B-EVAL/*
+**/JLinkLog.txt
+**/*.Win10
+.mxproject
+*.orig
+**/JLinkSettings.ini
+**/MDK-ARM/*.uvoptx
+**/MDK-ARM/*.lst
+**/MDK-ARM/*.scvd
+**/MDK-ARM/*.Administrator
