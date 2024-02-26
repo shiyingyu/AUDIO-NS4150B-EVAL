@@ -49,6 +49,7 @@
  */
 /* USER CODE BEGIN disableSDInit */
 /* #define DISABLE_SD_INIT */
+#define DISABLE_SD_INIT
 /* USER CODE END disableSDInit */
 
 /* Private variables ---------------------------------------------------------*/

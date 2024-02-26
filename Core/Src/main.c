@@ -113,8 +113,10 @@ int main(void)
   MX_FATFS_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
+  HAL_Delay(2000);
+  BSP_SD_Init();
   HAL_SD_CardInfoTypeDef CardInfo;
-  HAL_SD_GetCardInfo(&hsd, &CardInfo);
+  HAL_SD_GetCardInfo(&hsd, &CardInfo);  
   printf("SDCard %.2fGB.\n", (double)CardInfo.BlockNbr / 1024 * CardInfo.BlockSize / 1024 / 1024);
   initAudio(&hi2s2);
   
