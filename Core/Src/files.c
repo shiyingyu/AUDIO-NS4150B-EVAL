@@ -24,7 +24,9 @@ uint16_t fileCount;
 uint16_t filePos;
 char fileList[MAXFILES][13];
 #define FILETYPES 2
-const char* filetypes[6] = {"*.MP3", "*.WAV" };   // Files we are interested in
+// TODO: 后续需要优化处理下大小写
+// const char* filetypes[6] = {"*.MP3", "*.WAV" };   // Files we are interested in
+const char* filetypes[6] = {"*.MP3", "*.WAV", "*.mp3", "*.wav"};   // Files we are interested in
 
 void testFS(void){
 	FRESULT res;
@@ -149,7 +151,7 @@ void handleFS(void){
 
     for(uint8_t t=0;t<FILETYPES;t++){                           // Detect file extension
       if(strcmp(currentType,  filetypes[t])==0){
-        systemStatus.filetype = t;
+        systemStatus.filetype = t % 2;
         break;
       }
     }
